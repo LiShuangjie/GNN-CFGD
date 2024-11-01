@@ -2,7 +2,7 @@
 Graph Neural Networks with Coarse- and Fine-Grained Division for Mitigating Label Sparsity and Noise
 
 ## Overview Architecture
-![image](/frame.pdf)
+![image](https://github.com/LiShuangjie/GNN-CFGD/blob/main/frame.pdf)
 
 ## Training
 ```
