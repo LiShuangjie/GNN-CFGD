@@ -1,10 +1,10 @@
-# GNN-CFGD
-![alt](/frame.pdf)
-# Code
-Code for the paper "Graph Neural Networks with Coarse- and Fine-Grained Division for Mitigating Label Sparsity and Noise", 
-[link](). 
+## GNN-CFGD
+Graph Neural Networks with Coarse- and Fine-Grained Division for Mitigating Label Sparsity and Noise
 
-## Train
+## Overview Architecture
+![image](/frame.pdf)
+
+## Training
 ```
 python script.py
 ```
