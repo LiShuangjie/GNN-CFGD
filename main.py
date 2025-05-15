@@ -5,7 +5,7 @@ import torch
 from utils import noisify_with_P, random_disassortative_splits
 from dataset import Dataset
 
-from models.RTGNN import RTGNN
+from models.CFGD import CFGD
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--seed', type=int, default=10, help='Random seed.')
@@ -91,7 +91,7 @@ noise_labels[idx_train] = noise_y
 mask = noise_labels[idx_train] == train_labels
 
 
-model = RTGNN(args, device)
+model = CFGD(args, device)
 model.fit(features, adj, noise_labels, idx_train, idx_val)
 acc = model.test(idx_test)
 print(str(acc.item()))

@@ -212,9 +212,9 @@ class IntraviewReg(nn.Module):
         return neighbor_kl_loss
 
 
-class RTGNN(nn.Module):
+class CFGD(nn.Module):
     def __init__(self, args, device):
-        super(RTGNN, self).__init__()
+        super(CFGD, self).__init__()
         self.device = device
         self.args = args
         self.best_acc_pred_val = 0
@@ -459,7 +459,7 @@ class EstimateAdj(nn.Module):
         return representations, rec_loss
 
 
-    def get_estimated_weigths_RTGNN(self, edge_index, representations, origin_w=None):
+    def get_estimated_weigths_CFGD(self, edge_index, representations, origin_w=None):
         x0 = representations[edge_index[0]]
         x1 = representations[edge_index[1]]
         output = torch.sum(torch.mul(x0, x1), dim=1)
